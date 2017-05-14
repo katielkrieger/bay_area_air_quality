@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 .append('circle')
                 .attr('cx', (d, i) => xScale(d.Date))
                 .attr('cy', d => yScale(d.Station) - padding) // set to height of the city
-                .attr('r', d => 7 * d.Avg) // scaled by number of exceedances
+                .attr('r', d => 4 * d.Avg) // scaled by number of exceedances
                 .attr('fill', d => colors[d.Station]) // colors match detailed graphs
                 .attr('stroke', 'black')
                 .on("mouseenter", function(d) {
