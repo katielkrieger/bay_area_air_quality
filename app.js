@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
 
 	// set the SVG dimensions
-	var height = 600;
-	var width = 1200;
-    var padding = 60; 
+	var height = 400;
+	var width = 1000;
+    var padding = 30; 
     var svg = d3.select('svg')
                   .attr('width', width)
                   .attr('height', height);
@@ -147,7 +147,7 @@ document.addEventListener("DOMContentLoaded", function() {
             svg.append('text')
                 .attr('x', width/4)
                 .attr('y', yScale(national_standard) - padding/2)
-                .attr('font-size', "20px")
+                .attr('font-size', "10px")
                 .attr('text-anchor','middle')
                 .classed('standard', true)
                 .html(`Federal ambient air quality standard (35 \u00B5g/m³)`);
@@ -156,7 +156,7 @@ document.addEventListener("DOMContentLoaded", function() {
             svg.append('text')
                 .attr('x', width/2)
                 .attr('y', height/2)
-                .attr('font-size', "20px")
+                .attr('font-size', "10px")
                 .attr('text-anchor','middle')
                 .classed('oakNote', true)
                 .html(`No available data for Oakland before 2013`)
@@ -185,7 +185,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     tooltip.html(`<strong><span style='color:${colors[stationVisible]}'>${d.Date}:</span></strong><br>${d.Concs[calculatedIndex]} \u00B5g/m${"3".sup()}`)
                            .style("opacity", .8)
                            .style("left", d3.event.pageX - d3.select(".tooltip").node().getBoundingClientRect().width/2  + "px")
-                           .style("top", d3.event.pageY - 300 + "px" )
+                           .style("top", d3.event.pageY - 150 + "px" )
                 })
                 .on("mouseout", function() {
                     tooltip.style("opacity", 0)

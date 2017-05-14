@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
 
 	// set the SVG dimensions
-	var height = 600;
-	var width = 1400;
-    var padding = 60; 
-    var paddingLeft = 200;
+	var height = 400;
+	var width = 1100;
+    var padding = 30; 
+    var paddingLeft = 100;
     var svg = d3.select('svg')
                   .attr('width', width)
                   .attr('height', height);
@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     tooltip.html(`<strong><span style='color:${colors[d.Station]}'>${months[d.Month]}:</span></strong><br>${d.Avg.toFixed(1)} days`)
                            .style("opacity", .9)
                            .style("left", d3.event.pageX - d3.select(".tooltip").node().getBoundingClientRect().width/2  + "px")
-                           .style("top", d3.event.pageY - 200 + "px" )
+                           .style("top", d3.event.pageY - 100 + "px" )
                 })
                 .on("mouseout", function() {
                     tooltip.style("opacity", 0)
