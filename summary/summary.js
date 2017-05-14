@@ -49,13 +49,11 @@ document.addEventListener("DOMContentLoaded", function() {
             //  - Avg
 
             // Convert Avg values to floats and Months to dates
-            console.log(data);
             data = data.map(function(val) {
                 val.Avg = parseFloat(val.Avg);
                 val.Date = new Date(2016, parseFloat(val.Month), 15);
                 return val;
             });
-          //  console.log(data);
 
             // define basic dimensions and scaling
             var yScale = d3.scaleOrdinal()
