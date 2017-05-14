@@ -2,9 +2,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	// set the SVG dimensions
 	var height = 400;
-	var width = 1100;
     var padding = 30; 
     var paddingLeft = 100;
+    var width = max(window.innerWidth - (padding + paddingLeft) * 2, 1100);
     var svg = d3.select('svg')
                   .attr('width', width)
                   .attr('height', height);
