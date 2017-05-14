@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Get the CSV data
     d3.queue()
-        .defer(d3.csv, "/Air Quality Monitoring Data.csv")
+        .defer(d3.csv, "Air Quality Monitoring Data.csv")
         .await(function(error, data) {
             if (error) console.log(error);
 

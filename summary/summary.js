@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
  
     // Get the CSV data
     d3.queue()
-        .defer(d3.csv, "/summary/Exceedances_by_month.csv")
+        .defer(d3.csv, "summary/Exceedances_by_month.csv")
         .await(function(error, data) {
             if (error) console.log(error);
 
