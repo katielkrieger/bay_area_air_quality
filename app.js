@@ -2,8 +2,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	// set the SVG dimensions
 	var height = 400;
-	var width = 1000;
     var padding = 30; 
+    var width = window.innerWidth - padding * 4; // giving it room to breathe
     var svg = d3.select('svg')
                   .attr('width', width)
                   .attr('height', height);
