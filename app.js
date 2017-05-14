@@ -182,6 +182,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 .attr('fill', d => colors[stationVisible])
                 .classed('data', true)
                 .on("mouseenter", function(d) {
+                    console.log(stationVisible, colors[stationVisible]);
                     tooltip.html(`<strong><span style='color:${colors[stationVisible]}'>${d.Date}:</span></strong><br>${d.Concs[calculatedIndex]} \u00B5g/m${"3".sup()}`)
                            .style("opacity", .8)
                            .style("left", d3.event.pageX - d3.select(".tooltip").node().getBoundingClientRect().width/2  + "px")
@@ -232,7 +233,7 @@ document.addEventListener("DOMContentLoaded", function() {
             // add event listener for button to choose station to show
             d3.select('select')
               .on('change', function() {
-                var stationVisible = d3.event.target.options[d3.event.target.selectedIndex].value;
+                stationVisible = d3.event.target.options[d3.event.target.selectedIndex].value;
                 
                 d3.select('select')
                   .attr('class', `selectpicker btn btn-primary btn-lg ${stationVisible}`);
